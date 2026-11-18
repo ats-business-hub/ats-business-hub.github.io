@@ -220,6 +220,14 @@ code {
   margin: 0 0 0.5rem;
 }
 
+.table-wrap.scroll-x {
+  overflow-x: auto;
+}
+
+.table-wrap.scroll-x .compare {
+  min-width: 46rem;
+}
+
 .compare {
   width: 100%;
   border-collapse: collapse;
@@ -384,6 +392,49 @@ code {
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--accent);
+  }
+
+  .table-wrap.scroll-x {
+    overflow-x: auto;
+  }
+
+  .table-wrap.scroll-x .compare {
+    display: table;
+    width: 100%;
+    min-width: 46rem;
+    background: var(--surface);
+  }
+
+  .table-wrap.scroll-x .compare thead {
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+  }
+
+  .table-wrap.scroll-x .compare tbody {
+    display: table-row-group;
+  }
+
+  .table-wrap.scroll-x .compare tr {
+    display: table-row;
+    margin: 0;
+    border: 0;
+    background: transparent;
+  }
+
+  .table-wrap.scroll-x .compare th,
+  .table-wrap.scroll-x .compare td {
+    display: table-cell;
+    width: auto;
+  }
+
+  .table-wrap.scroll-x .compare th[scope="row"] {
+    background: var(--accent-soft);
+    color: var(--ink);
   }
 }
 
