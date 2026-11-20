@@ -503,3 +503,82 @@ code {
     white-space: normal;
   }
 }
+
+
+/* Quick pick boxes and the homepage Top picks strip (round 11). */
+
+.quick-pick,
+.top-picks {
+  background: var(--accent-soft);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--accent);
+  padding: 0.9rem 1.05rem 0.75rem;
+  margin: 0 0 1.5rem;
+  max-width: var(--measure);
+}
+
+.quick-pick .eyebrow,
+.top-picks .eyebrow {
+  margin: 0 0 0.45rem;
+}
+
+.quick-pick p,
+.top-picks p {
+  margin: 0 0 0.55rem;
+}
+
+.quick-pick p:last-child,
+.top-picks p:last-child {
+  margin-bottom: 0;
+}
+
+.quick-pick .cta,
+.top-picks .cta {
+  margin: 0 0.6rem 0.35rem 0;
+}
+
+.quick-pick ul,
+.top-picks ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.quick-pick li {
+  margin: 0 0 0.85rem;
+}
+
+.quick-pick li:last-child {
+  margin-bottom: 0;
+}
+
+.top-picks {
+  max-width: none;
+  background: var(--surface);
+}
+
+.top-picks ul {
+  display: grid;
+  gap: 0.75rem;
+}
+
+@media (min-width: 48rem) {
+  .top-picks ul {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.top-picks li {
+  margin: 0;
+  padding: 0.75rem 0.85rem 0.65rem;
+  background: var(--accent-soft);
+  border: 1px solid var(--line);
+}
+
+@media (forced-colors: active) {
+  .quick-pick,
+  .top-picks,
+  .top-picks li {
+    border: 1px solid CanvasText;
+  }
+}
